@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <header>
-      <musicsearch v-on:musicsearch="showsong" v-on:openmusicsong="showsong"></musicsearch>
+      <musicsearch @musicsearch="showsong" @openmusicsong="showsong"></musicsearch>
       <ul>
         <li class="head-li" @click="move('/')">个性推荐</li>
         <li class="head-li" @click="move('/music')">歌单</li>
         <li class="head-li" @click="move('/station')">主播电台</li>
         <li class="head-li" @click="move('/rank')">排行榜</li>
       </ul>
-      <div class="bar" :class="Classmove"></div>
+      <div class="bar" :class="class_move"></div>
     </header>
     <router-view ref="menu"></router-view>
   </div>
